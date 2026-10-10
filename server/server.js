@@ -20,10 +20,24 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
+// Allowed frontend origins
+const allowedOrigins = [
+  "https://new-india-fashion.vercel.app",
+  "http://localhost:5173",
+];
+
 // Middleware
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: (origin, callback) => {
+      // Allow requests without an Origin header
+      // and requests from approved frontend origins
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
