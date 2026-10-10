@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  --cream: #fffaf4;
+  --ivory: #fffdf9;
+  --peach: #f8d9c5;
+  --peach-light: #fff0e7;
+  --pink: #f2c8d5;
+  --pink-light: #fdf0f4;
+  --lavender: #ddd5ef;
+  --lavender-light: #f4f0fa;
+  --sage: #d8e4d5;
+  --sage-light: #f1f7ef;
+  --brown: #5b4035;
+  --brown-dark: #3f2b24;
+  --text: #352a27;
+  --muted: #7b6d67;
+  --border: #eadfd7;
+  --white: #ffffff;
+  --gold: #b58a52;
+
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  min-height: 100vh;
+}
